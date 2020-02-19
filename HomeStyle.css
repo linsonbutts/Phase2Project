@@ -7,7 +7,7 @@
 ul{
     list-style: none;
     align-content: center;
-    display: block;
+    display: inline;
 }
 
 #shoppingList{
@@ -26,6 +26,8 @@ ul{
     max-height: 30px;
     font: size 30px;
     text-align: center;
+    display: block;
+    color: white;
 }
 .dropbtn {
     background-color: pink;
@@ -38,7 +40,6 @@ ul{
   .dropdown {
     position: relative;
     display: inline-block;
-    
   }
   .dropdown-content {
     display: none;
@@ -58,3 +59,16 @@ ul{
   .dropdown-content a:hover {background-color: rebeccapurple;}
   .dropdown:hover .dropdown-content {display: block;}
   .dropdown:hover .dropbtn {background-color: palevioletred;}
+.cart{
+    width: 90px;
+    height: 90px;
+    background-color: rebeccapurple;
+    border-radius: 15px;
+    border-style: none;
+    float: right;
+    position: relative;
+}
+.orderBox
+{
+    border: solid orchid 17px;
+}
