@@ -59,7 +59,7 @@ ul{
   .dropdown-content a:hover {background-color: rebeccapurple;}
   .dropdown:hover .dropdown-content {display: block;}
   .dropdown:hover .dropbtn {background-color: palevioletred;}
-.cart{
+.cartButton{
     width: 90px;
     height: 90px;
     background-color: rebeccapurple;
@@ -71,4 +71,6 @@ ul{
 .orderBox
 {
     border: solid orchid 17px;
+    font-family: 'Courier New', Courier, monospace;
+    
 }
