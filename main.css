@@ -1,0 +1,133 @@
+.container {
+    margin-top: 100px;
+}
+
+.newarrival {
+    background: green;
+    width: 50px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.col-md-7 h2 {
+    color: #555;
+}
+
+.stars {
+    height: 15px;
+}
+
+.price {
+    color: #FE988F;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+input {
+    border: 1px solid #ccc;
+    font-weight: bold;
+    height: 33px;
+    text-align: center;
+    width: 30px;
+}
+
+.cart {
+    background: #FE980F;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.web {
+    background-color: plum;
+}
+
+
+
+.cartButton {
+    width: 90px;
+    height: 90px;
+    background-color: rebeccapurple;
+    border-radius: 15px;
+    border-style: none;
+    float: right;
+    position: relative;
+}
+.prodImage{
+    width: 130px;
+    height: 200px;
+    border: solid  8px orchid;
+    border-radius: 5px;
+}
+ul{
+    list-style: none;
+    align-content: center;
+    display: inline;
+}
+
+#shoppingList{
+    text-align: center;
+}
+.description{
+    font-family: 'Courier New', Courier, monospaced;
+}
+.priceTag{
+    font-family: 'Courier New', Courier, monospaced;
+    color: salmon;
+}
+.opening{
+    background-color: salmon;
+    font-family:'Courier New', Courier, monospace;
+    max-height: 30px;
+    font: size 30px;
+    text-align: center;
+    display: block;
+    color: white;
+}
+.dropbtn {
+    background-color: pink;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: violet;
+    min-width: 160px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+  .dropdown-content a:hover {background-color: rebeccapurple;}
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropbtn {background-color: palevioletred;}
+.cartButton{
+    width: 90px;
+    height: 90px;
+    background-color: rebeccapurple;
+    border-radius: 15px;
+    border-style: none;
+    float: right;
+    position: relative;
+}
+.orderBox
+{
+    border: solid orchid 17px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}

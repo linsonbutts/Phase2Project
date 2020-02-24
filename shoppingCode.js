@@ -5,8 +5,10 @@ else{
     ready()
 }
 
+var globalCart= [];
+
 function ready(){
-    var removecartItemButtons = document.getElementsByClassName("dangerBtn");
+    var removecartItemButtons = globalCart.getElementsByClassName("dangerBtn");
 
     for(var i=0; i<removecartItemButtons.length; i++){
         var button = removecartItemButtons[i];
@@ -41,65 +43,37 @@ function removeCartItem(event){
 }
 
 }
-    function updateCartTotal(){
-        var cartItemContainer = document.getElementsByClassName("cartItem")[a]
-        var cartRows = cartItemContainer.getElementsByClassName("cartRow")
-        total =0;
-        for (var i=0; i<cartRows.length; i++){
-            var cartRow = cartRows[i];
-            var priceElement = cartRow.getElementsByClassName("priceTag")[0]
-            var quantityElement = cartRow.getElementsByClassName("quantityInput")[0]
-            var price = parseFloat(priceElement.innerText.replace("$",""))
-            var quantity = quantityElement.Value
-            total = total (price*quantity)
-        }
-        total = Math.round(total * 100)/100
-        document.getElementsByClassName("totalPrice")[0].innerText = "$" + total
-    }
+    function addItemToCart(){
+        var cart = [];
+        var i =0;
+        if (addToCartClicked() == true)
+        {
+            cart[i]= document.getElementsByClassName('shopItem')[0];
+            globalCart[i]=cart[i];
+            i++;
 
-    var addToCartButtons = document.getElementsByClassName("shopButton")
-    for (var i=0; i<cartRows.length; i++)
-    {
-        var button = addToCartButtons[i]
-        button.addEventListener("click", addToCartClicked)
+            while(cart[i].getElementsByClassName('itemTitle').innerText == globalCart[i].getElementsByClassName('itemTitle').innerText)
+            alert('This item is already in your cart')
+            
+        }
+        total =   quantityInput.value()*  parseFloat(document.getElementsByClassName("priceTag")[0].innerText)
     }
 
     function addToCartClicked(event){
         var button = event.target
-        var shopItem = button.parentElement
-        var title = shopItem.getElementsByClassName("shopItem")[0].innerText
-        var price = shopItem.getElementsByClassName("priceTag")[0].innerText
-        var imageSrc = shopItem.getElementsByClassName("itemImage")[0].imageSrc
+        var shopItem = getElementsByClassName("shopItem")[0]
+        var title = document.getElementsByClassName("itemTitle")[0].innerText
+        var price = document.getElementsByClassName("priceTag")[0].innerText
         console.log(title,price,imageSrc)
         addItemToCart(title,price,imageSrc)
         updateCartTotal()
     }
-
-    function addItemToCart(title,price,imageSrc){
-        cartRow.InnerText = title
-        cartRow.classList.add("cartRow")
-        var cartRow = document.getElementById('div')
-        var cartItems = document.getElementsByClassName('cartItem')[0]
-        var cartItemNames = cartItems.getElementsByClassName('itemTitle')
-        for (var i=0; i<cartItemNames; i++){
-            if (cartItemNames[i].innerText == title)
-            alert('This is in your cart already')
-            return
-        }
-        cartRow.innerHTML = cartRowContents
-        cartItems.append(cartRow)
-        cartRow.getElementsByClassName("dangerBtn")[0].addEventListener('click',removeCartItem)
-        cartRow.getElementsByClassName('quantityInput')[0].addEventListener
-        ('change',quantityChanged)
-
-        document.getElementsByClassName('purchaseBtn')[0].addEventListener('click',purchaseClicked)
-
-        function purchaseClicked(){
-            alert('Thank you for your purchase')
-            var cartItems = document.getElementsByClassName('cartItems')[0]
-            while(cartItems.hasChildren){
-                cartItems.removeChild(cartItems.firstChild)
+        function updateCartTotal(){
+            var total = null;
+            var quantity = null;
+            for(i = 0; i<globalCart.length; i++){
+                quantity = globalCart[i].getElementsByClassName('quantityInput').value()
+                total = globalCart[i].price()*quantity
             }
-            updateCartTotal()
         }
-    }
+    
